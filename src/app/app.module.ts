@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router'; // Importa Routes da @angular/router
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,9 +15,10 @@ import { ShopComponent } from './shop/shop.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OrdersComponent } from './orders/orders.component';
 
-const Rotte: Routes = [
-  { path: '', component: HomeComponent }, // Rotta predefinita (pagina iniziale)
-  { path: 'product/:id', component: ProductsingleComponent }, // Esempio di rotta con parametro dinamico
+
+const Routes: Routes = [
+  { path: '', component: HomeComponent }, 
+  { path: 'product/:id', component: ProductsingleComponent }, 
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'shop', component: ShopComponent },
@@ -38,7 +41,8 @@ const Rotte: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(Rotte),
+    RouterModule.forRoot(Routes),
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
