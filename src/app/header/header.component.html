@@ -1,24 +1,26 @@
 <header class="header">
+    <a href="#" class="logo"> <img src="../../assets/kaMsaY.svg" alt="logo" />
+      Kams </a>
 
-  <a href="#" class="logo"> <i class="bi bi-search"></i> Kams </a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#product">product</a>
+        <a href="#featured">featured</a>
 
-  <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#product">product</a>
-      <a href="#featured">featured</a>
-      <a href="#blog">blog</a>
-      <a href="#contact">contact</a>
-  </nav>
+    </nav>
 
-  <div class="icons">
-      <div><a [routerLink]="['/profiledetails']" ><i class="bi bi-person-fill"></i></a></div>
-      <div>
-        <a [routerLink]="['/cart']">
-          <i class="bi bi-bag-heart-fill"></i>
-        </a>
-      </div>
-      <div class="fas fa-heart"></div>
-      <div id="menu-bar" class="fas fa-bars"></div>
-  </div>
-
+    <div class="icons">
+        <div>
+            <a [routerLink]="['/profile-details']"
+                ><i class="bi bi-person-fill"></i
+            ></a>
+        </div>
+        <div>
+            <a [routerLink]="['/cart']">
+                <i class="bi bi-bag-heart-fill"></i>
+            </a>
+        </div>
+        <div class="fas fa-heart"></div>
+        <div id="menu-bar" class="fas fa-bars"></div>
+    </div>
 </header>

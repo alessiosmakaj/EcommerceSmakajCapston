@@ -21,22 +21,22 @@
   transition: .2s linear;
 }
 
-html{
+header{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar{
+header::-webkit-scrollbar{
   width: .8rem;
 }
 
-html::-webkit-scrollbar-track{
+header::-webkit-scrollbar-track{
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+header::-webkit-scrollbar-thumb{
   background: var(--primary);
   border-radius: 5rem;
 }
@@ -172,6 +172,12 @@ section{
     }
   
   }
+  .fixed-navbar {
+    background: var(--white); /* Cambia il colore di sfondo a tuo piacimento */
+    opacity: 1; /* Imposta l'opacità a 1 per renderla opaca */
+    transition: background 0.3s, opacity 0.3s; /* Aggiungi una transizione per una transizione più fluida */
+  }
+  
   
   @media (max-width: 450px){
   
