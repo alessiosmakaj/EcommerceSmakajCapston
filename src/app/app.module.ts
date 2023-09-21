@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router'; // Importa Routes da @angular/router
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +13,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ShopComponent } from './shop/shop.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OrdersComponent } from './orders/orders.component';
+import { AddressComponent } from './address/address.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 
 
 const Routes: Routes = [
@@ -37,12 +39,14 @@ const Routes: Routes = [
     CheckoutComponent,
     ShopComponent,
     DashboardComponent,
-    OrdersComponent
+    OrdersComponent,
+    AddressComponent,
+    ForgotPasswordComponent,
+    ProfileDetailsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(Routes),
-    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
