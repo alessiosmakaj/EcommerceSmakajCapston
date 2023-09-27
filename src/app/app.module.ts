@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router'; // Importa Routes da @an
 
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -16,10 +18,14 @@ import { OrdersComponent } from './orders/orders.component';
 import { AddressComponent } from './address/address.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InvernouomoComponent } from './invernouomo/invernouomo.component';
 
 
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
+  { path: 'auth/login', component: LoginComponent },
+  { path: 'auth/register', component: RegisterComponent },
   { path: 'product/:id', component: ProductsingleComponent }, 
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
@@ -43,10 +49,12 @@ const Routes: Routes = [
     OrdersComponent,
     AddressComponent,
     ForgotPasswordComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    InvernouomoComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(Routes),
   ],
   providers: [],

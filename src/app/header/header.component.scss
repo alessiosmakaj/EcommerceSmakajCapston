@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
 
 :root{
     --primary: #a4916d;
@@ -41,9 +41,7 @@ header::-webkit-scrollbar-thumb{
   border-radius: 5rem;
 }
 
-section{
-  padding: 5rem 7%;
-}
+
 
 .heading{
   text-align: center;
@@ -53,6 +51,12 @@ section{
   font-weight: bolder;
   margin-bottom: 3rem;
 }
+.header {
+  background: rgba(255, 255, 255, 0.9); /* Colore di sfondo opaco */
+  backdrop-filter: blur(10px); /* Effetto sfocatura opaca */
+  transition: background 0.3s, opacity 0.3s; /* Transizioni fluide */
+}
+
 
 .heading span{
   color: var(--primary);
@@ -77,6 +81,11 @@ section{
 
 
 /* header */
+
+a {
+  color: black; /* Imposta il colore del testo a nero */
+  text-decoration: none; /* Rimuovi la sottolineatura */
+}
 
 .header{
   margin-right: 9em;
