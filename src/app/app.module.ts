@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router'; // Importa Routes da @angular/router
-
+import { RouterModule, Routes, Scroll } from '@angular/router'; // Importa Scroll da @angular/router
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -20,7 +19,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InvernouomoComponent } from './invernouomo/invernouomo.component';
-
+import { InvernodonnaComponent } from './invernodonna/invernodonna.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -32,7 +32,9 @@ const Routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'orders', component: OrdersComponent },
-  { path: 'profile-details', component: ProfileDetailsComponent}
+  { path: 'profile-details', component: ProfileDetailsComponent},
+  { path: 'invernouomo', component: InvernouomoComponent},
+  { path: 'invernodonna', component: InvernodonnaComponent }
 ];
 
 @NgModule({
@@ -50,14 +52,20 @@ const Routes: Routes = [
     AddressComponent,
     ForgotPasswordComponent,
     ProfileDetailsComponent,
-    InvernouomoComponent
+    InvernouomoComponent,
+    LoginComponent,
+    RegisterComponent,
+    InvernodonnaComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(Routes),
+    RouterModule.forRoot(Routes, { scrollPositionRestoration: 'enabled' }), // Configura il servizio Scroll
   ],
-  providers: [],
+  providers: [
+    { provide: Scroll, useValue: (router: any) => { return [0, 0]; } }, // Configura il servizio Scroll per tornare all'inizio della pagina
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

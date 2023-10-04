@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; // Importa il Router da @angular/router
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
-  constructor() { }
+  constructor(private router: Router) {} // Inietta il Router nel costruttore
 
   ngOnInit(): void {
   }
+
 
 }
