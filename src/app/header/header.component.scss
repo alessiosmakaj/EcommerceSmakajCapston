@@ -88,6 +88,7 @@ a {
 }
 
 .header{
+  height: 120px;
   margin-right: 9em;
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -98,6 +99,8 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 9%;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .header .logo{
