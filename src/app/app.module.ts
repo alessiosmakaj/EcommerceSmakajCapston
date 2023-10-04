@@ -58,15 +58,15 @@ const Routes: Routes = [
     LoginComponent,
     RegisterComponent,
     InvernodonnaComponent,
-    AboutusComponent
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(Routes, { scrollPositionRestoration: 'enabled' }), // Configura il servizio Scroll
+    RouterModule.forRoot(Routes, { scrollPositionRestoration: 'enabled' }), 
   ],
   providers: [
-    { provide: Scroll, useValue: (router: any) => { return [0, 0]; } }, // Configura il servizio Scroll per tornare all'inizio della pagina
+    { provide: Scroll, useValue: (router: any) => { return [0, 0]; } }, 
   ],
   bootstrap: [AppComponent]
 })

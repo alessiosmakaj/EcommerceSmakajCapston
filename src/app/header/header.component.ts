@@ -1,31 +1,18 @@
-import { Component, OnInit, HostListener, Renderer2, ElementRef } from '@angular/core';
+import { Component, HostListener, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  isHeaderOpaque = false;
-
+export class HeaderComponent {
   constructor(private renderer: Renderer2, private el: ElementRef) { }
-
-  ngOnInit(): void {
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = window.scrollY;
-    if (scrollY > 100) { // Cambia il valore a tuo piacimento
-      if (!this.isHeaderOpaque) {
-        this.renderer.addClass(this.el.nativeElement, 'opaque');
-        this.isHeaderOpaque = true;
-      }
-    } else {
-      if (this.isHeaderOpaque) {
-        this.renderer.removeClass(this.el.nativeElement, 'opaque');
-        this.isHeaderOpaque = false;
-      }
-    }
+    const opacity = scrollY > 100 ? Math.min(1, (scrollY - 100) / 100) : 0; // Gradualmente cambia l'opacità
+
+    this.renderer.setStyle(this.el.nativeElement, 'background-color', `rgba(255, 255, 255, ${opacity})`);
   }
 }
