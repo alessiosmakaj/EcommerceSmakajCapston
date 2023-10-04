@@ -22,6 +22,7 @@ import { InvernouomoComponent } from './invernouomo/invernouomo.component';
 import { InvernodonnaComponent } from './invernodonna/invernodonna.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
+
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
   { path: 'auth/login', component: LoginComponent },
@@ -34,7 +35,8 @@ const Routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'profile-details', component: ProfileDetailsComponent},
   { path: 'invernouomo', component: InvernouomoComponent},
-  { path: 'invernodonna', component: InvernodonnaComponent }
+  { path: 'invernodonna', component: InvernodonnaComponent },
+  { path: 'aboutus', component: AboutusComponent}
 ];
 
 @NgModule({
