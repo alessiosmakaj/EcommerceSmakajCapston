@@ -3,10 +3,10 @@ import { CartService } from '../cart.service'; // Importa il servizio del carrel
 
 @Component({
   selector: 'app-productsingle',
-  templateUrl: './productsingle.component.html',
-  styleUrls: ['./productsingle.component.scss']
+  templateUrl: './vestito.component.html',
+  styleUrls: ['./vestito.component.scss']
 })
-export class ProductsingleComponent {
+export class VestitoComponent {
   constructor(private cartService: CartService) {}
 
   addToCart(): void {

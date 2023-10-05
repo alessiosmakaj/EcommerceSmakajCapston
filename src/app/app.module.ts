@@ -22,12 +22,13 @@ import { InvernouomoComponent } from './invernouomo/invernouomo.component';
 import { InvernodonnaComponent } from './invernodonna/invernodonna.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VestitoComponent } from './vestito/vestito.component';
+
 
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'product/:id', component: ProductsingleComponent }, 
+  { path: 'register', component: RegisterComponent }, 
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'shop', component: ShopComponent },
@@ -36,7 +37,8 @@ const Routes: Routes = [
   { path: 'profile-details', component: ProfileDetailsComponent},
   { path: 'invernouomo', component: InvernouomoComponent},
   { path: 'invernodonna', component: InvernodonnaComponent },
-  { path: 'aboutus', component: AboutusComponent}
+  { path: 'aboutus', component: AboutusComponent},
+  { path: 'productsingle', component: ProductsingleComponent}
 ];
 
 @NgModule({
@@ -59,6 +61,7 @@ const Routes: Routes = [
     RegisterComponent,
     InvernodonnaComponent,
     AboutusComponent,
+    VestitoComponent,
   ],
   imports: [
     BrowserModule,
