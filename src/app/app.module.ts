@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InvernouomoComponent } from './invernouomo/invernouomo.component';
 import { InvernodonnaComponent } from './invernodonna/invernodonna.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -62,6 +62,8 @@ const Routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(Routes, { scrollPositionRestoration: 'enabled' }), 
   ],
