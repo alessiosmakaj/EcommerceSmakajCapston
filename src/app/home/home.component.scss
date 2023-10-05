@@ -80,6 +80,7 @@ section{
 /* home */
 
 .home{
+  width: 100vw;
   min-height: 110vh;
   display: flex;
  
@@ -88,23 +89,39 @@ section{
   align-items: center;
 }
 
-.home .content{
+.home .container-flex{
   max-width: 60rem;
   padding-top: 8rem;
+  padding-left: 8rem;
 }
 
-.home .content h3{
+.home .container-flex h3{
   font-size: 6rem;
   color: var(--black);
   line-height: 1.2;
 }
 
-.home .content p{
+.home .container-flex p{
   font-size: 1.5rem;
   padding: 1.3rem 0;
   color: var(--light-black);
   line-height: 2;
 }
+
+.container-flex {
+  position: relative; /* Aggiungi posizione relativa */
+  width: 100%; /* Imposta la larghezza al 100% della larghezza del contenitore genitore */
+  height: auto; /* Imposta l'altezza su auto per adattarsi automaticamente all'altezza del contenuto */
+  background-image: url('../../assets/imgcapston/bannerrr.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  padding: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 
 /* end */
 

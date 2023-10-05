@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../cart.service'; // Assicurati di importare il tuo servizio carrello
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -8,14 +8,22 @@ import { CartService } from '../cart.service'; // Assicurati di importare il tuo
 })
 export class CheckoutComponent implements OnInit {
   cartItems: any[] = [];
-  cartTotal: number = 0; // Dichiarazione della variabile cartTotal
+  cartTotal: number = 0;
+  isPaymentComplete: boolean = false; // Variabile per tenere traccia dello stato di pagamento
 
   constructor(public cartService: CartService) {
     this.cartItems = this.cartService.getCart();
   }
 
   ngOnInit(): void {
-    // Calcola il totale del carrello utilizzando il tuo servizio del carrello e assegna il valore a cartTotal
     this.cartTotal = this.cartService.getTotal();
+  }
+
+  simulatePayment() {
+    // Qui puoi inserire la tua logica di pagamento simulato
+    // Ad esempio, dopo un piccolo ritardo (simulando il processo di pagamento), imposta isPaymentComplete su true.
+    setTimeout(() => {
+      this.isPaymentComplete = true;
+    }, 2000); // Simula il pagamento completato dopo 2 secondi (puoi regolare il valore a tuo piacimento)
   }
 }
