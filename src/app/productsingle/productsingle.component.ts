@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartService } from '../cart.service'; // Importa il servizio del carrello
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-productsingle',
@@ -10,14 +10,11 @@ export class ProductsingleComponent {
   constructor(private cartService: CartService) {}
 
   addToCart(): void {
-    // Puoi anche aggiungere manualmente un oggetto prodotto al carrello qui
     const product = {
-      id: 'prodotto-id-mock',
-      name: 'Nome del Prodotto',
-      description: 'Descrizione del prodotto',
-      price: 19.99,
-      images: ['url-immagine1', 'url-immagine2', 'url-immagine3']
+      id: '768814TPT151000',
+      name: 'PANTALONI DOUBLE FRONT IN NERO',
+      price: 1850
     };
-    this.cartService.addToCart(product); // Aggiungi il prodotto al carrello
+    this.cartService.addToCart(product);
   }
 }

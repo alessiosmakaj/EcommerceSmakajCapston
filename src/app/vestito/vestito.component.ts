@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CartService } from '../cart.service'; // Importa il servizio del carrello
+import { CartService } from '../cart.service';
 
 @Component({
-  selector: 'app-productsingle',
+  selector: 'app-vestito',
   templateUrl: './vestito.component.html',
   styleUrls: ['./vestito.component.scss']
 })
@@ -10,14 +10,12 @@ export class VestitoComponent {
   constructor(private cartService: CartService) {}
 
   addToCart(): void {
-    // Puoi anche aggiungere manualmente un oggetto prodotto al carrello qui
     const product = {
-      id: 'prodotto-id-mock',
-      name: 'Nome del Prodotto',
-      description: 'Descrizione del prodotto',
-      price: 19.99,
-      images: ['url-immagine1', 'url-immagine2', 'url-immagine3']
+      id: '768921TMV159000',
+      name: 'INFLATABLE HOODIE UNITY SPORTS ICON MEDIUM FIT CON ZIP IN BIANCO',
+      description: 'Descrizione del prodotto 2',
+      price: 2500
     };
-    this.cartService.addToCart(product); // Aggiungi il prodotto al carrello
+    this.cartService.addToCart(product);
   }
 }

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Kenia&family=Patua+One&family=Poppins:wght@400;500;600&family=Roboto&family=Rubik+80s+Fade&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 
 
 .main{
-    background-color: #eee;
+    background-color: #ffffff;
     height: 100vh;
 }
 
@@ -13,6 +13,7 @@
     margin: auto;
 
 }
+
 
 .login{
     background-color: #fff;
@@ -26,11 +27,11 @@
 
 
 .login h1{
-    font-family: 'Kenia', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 .login input{
-    font-family: 'Kenia', cursive;
+
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -45,7 +46,7 @@
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #ec0000;
+  background: #000000;
   color: #fff; 
   width: 100%;
   border: none;
@@ -55,7 +56,7 @@
 }
 
 .login button:hover{
-    background: #dc0d0d;
+    background: #000000;
 }
 
 
@@ -67,7 +68,7 @@
 }
 
 .login .message a{
-    color: #ec0000;
+    color: #000000;
     text-decoration: none;
 }
 

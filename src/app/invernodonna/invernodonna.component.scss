@@ -417,6 +417,18 @@ section{
   color: red;
   font-size: 2rem;
 }
+a.box {
+  text-decoration: none;
+  color: black;
+  cursor: default; /* Imposta il cursore del mouse come il cursore predefinito */
+}
+
+/* Stili per il link visitato */
+a.box:visited {
+  color: black;
+  cursor: default;
+}
+
 
 .featured .featured-slider .slide .content .stars{
   font-size: 1.7rem;

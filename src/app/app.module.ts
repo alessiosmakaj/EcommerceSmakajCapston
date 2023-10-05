@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes, Scroll } from '@angular/router'; // Importa Scroll da @angular/router
+import { RouterModule, Routes, Scroll } from '@angular/router';
+import { CartService } from './cart.service'; // Importa Scroll da @angular/router
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -23,6 +24,7 @@ import { InvernodonnaComponent } from './invernodonna/invernodonna.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VestitoComponent } from './vestito/vestito.component';
+import { Vestito2Component } from './vestito2/vestito2.component';
 
 
 const Routes: Routes = [
@@ -38,7 +40,9 @@ const Routes: Routes = [
   { path: 'invernouomo', component: InvernouomoComponent},
   { path: 'invernodonna', component: InvernodonnaComponent },
   { path: 'aboutus', component: AboutusComponent},
-  { path: 'productsingle', component: ProductsingleComponent}
+  { path: 'productsingle', component: ProductsingleComponent},
+  { path: 'vestito', component: VestitoComponent},
+  { path: 'vestito2', component: Vestito2Component}
 ];
 
 @NgModule({
@@ -62,6 +66,7 @@ const Routes: Routes = [
     InvernodonnaComponent,
     AboutusComponent,
     VestitoComponent,
+    Vestito2Component,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +77,7 @@ const Routes: Routes = [
   ],
   providers: [
     { provide: Scroll, useValue: (router: any) => { return [0, 0]; } }, 
+    CartService,
   ],
   bootstrap: [AppComponent]
 })
