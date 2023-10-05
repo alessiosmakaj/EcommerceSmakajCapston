@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes, Scroll } from '@angular/router'; // Importa Scroll da @angular/router
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -25,8 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const Routes: Routes = [
   { path: '', component: HomeComponent }, 
-  { path: 'auth/login', component: LoginComponent },
-  { path: 'auth/register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'product/:id', component: ProductsingleComponent }, 
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
